@@ -81,6 +81,7 @@ function capitalizeFirstLetter(string) {
 const rockBtn = document.querySelector(".rockBtn");
 const paperBtn = document.querySelector(".paperBtn");
 const scissorsBtn = document.querySelector(".scissorsBtn");
+const restartBtn = document.querySelector(".restartBtn");
 const scoreMessage = document.querySelector(".scoreMessage");
 const scoreInfo = document.querySelector(".scoreInfo");
 const playerScoreInfo = document.querySelector(".playerScoreInfo");
@@ -90,6 +91,7 @@ const endgameMsg = document.querySelector(".endgameMsg");
 rockBtn.addEventListener("click", () => handleClick("ROCK"));
 paperBtn.addEventListener("click", () => handleClick("PAPER"));
 scissorsBtn.addEventListener("click", () => handleClick("SCISSORS"));
+restartBtn.addEventListener("click", restartGame);
 
 function handleClick(playerSelection) {
   const computerSelection = getRandomChoice();
@@ -100,4 +102,13 @@ function handleClick(playerSelection) {
       ? alert("You won!")
       : alert("You lost...");
   }
+}
+
+function restartGame() {
+  playerScore = 0;
+  computerScore = 0;
+  scoreInfo.textContent = "Choose your weapon";
+  scoreMessage.textContent = "First to score 5 points wins the game";
+  playerScoreInfo.textContent = "Player: 0";
+  computerScoreInfo.textContent = "Computer: 0";
 }

@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissor</h1>
-    <button class="rockBtn">Rock</button>
-    <button class="paperBtn">Paper</button>
-    <button class="scissorsBtn">Scissor</button>
-    <p class="scoreInfo"></p>
-    <p class="scoreMessage"></p>
-    <p class="playerScoreInfo"></p>
-    <p class="computerScoreInfo"></p>
+    <div class="Container">
+      <h1>Rock Paper Scissor</h1>
+      <button class="rockBtn button-19" role="button">Rock</button>
+      <button class="paperBtn button-19" role="button">Paper</button>
+      <button class="scissorsBtn button-19" role="button">Scissor</button>
+      <button class="restartBtn button-19" role="button">Restart</button>
+      <div class="info">
+        <p class="scoreInfo">Choose your weapon</p>
+        <p class="scoreMessage">First to score 5 points wins the game</p>
+        <p class="playerScoreInfo">Player: 0</p>
+        <p class="computerScoreInfo">Computer: 0</p>
+      </div>
+    </div>
 
     <script src="main.js"></script>
   </body>
