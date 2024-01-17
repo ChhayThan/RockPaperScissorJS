@@ -14,6 +14,10 @@ let playerScore = 0;
 let computerScore = 0;
 let roundWinner = "";
 
+function isGameOver() {
+  return playerScore === 5 || computerScore === 5;
+}
+
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     roundWinner = "tie";
@@ -81,6 +85,7 @@ const scoreMessage = document.querySelector(".scoreMessage");
 const scoreInfo = document.querySelector(".scoreInfo");
 const playerScoreInfo = document.querySelector(".playerScoreInfo");
 const computerScoreInfo = document.querySelector(".computerScoreInfo");
+const endgameMsg = document.querySelector(".endgameMsg");
 
 rockBtn.addEventListener("click", () => handleClick("ROCK"));
 paperBtn.addEventListener("click", () => handleClick("PAPER"));
@@ -89,4 +94,10 @@ scissorsBtn.addEventListener("click", () => handleClick("SCISSORS"));
 function handleClick(playerSelection) {
   const computerSelection = getRandomChoice();
   playRound(playerSelection, computerSelection);
+
+  if (isGameOver()) {
+    return playerScore > computerScore
+      ? alert("You won!")
+      : alert("You lost...");
+  }
 }
