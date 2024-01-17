@@ -1,3 +1,3 @@
 # RockPaperScissorJS
 
-#LINK: https://chhaythan.github.io/RockPaperScissorJS/
+# LINK: https://chhaythan.github.io/RockPaperScissorJS/
